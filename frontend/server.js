@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: false}))
 app.use("/static", express.static(path.resolve(__dirname, "static")));
 
 var bodyParser = require('body-parser')
-app.use( bodyParser.json() );                       // to support JSON-encoded bodies
+app.use(bodyParser.json() );                        // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({extended: true}));   // to support URL-encoded bodies
 
 app.get("/", rootController.root)
