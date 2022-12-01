@@ -1,0 +1,20 @@
+{
+  "name": "simple-crud-app-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "s": "node ./frontend/server.js",
+    "start": "nodemon ./frontend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.20"
+  }
+}
