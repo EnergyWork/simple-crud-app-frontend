@@ -1,3 +1,7 @@
+# Custom
+.stuff
+.vscode
+
 # Logs
 logs
 *.log
@@ -129,4 +133,3 @@ dist
 .yarn/install-state.gz
 .pnp.*
 /app
-/.stuff

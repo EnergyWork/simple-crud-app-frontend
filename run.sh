@@ -1,2 +1,2 @@
 #!/bin/bash
-node ./frontend/server.js
+npm run start
