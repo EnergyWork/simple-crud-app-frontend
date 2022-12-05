@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express'
-import IControllerBase from "../interfaces/IControllerBase.interface";
+import IControllerBase from "../interfaces/IControllerBase.interface.js";
 
 class HomeController implements IControllerBase {
     private path = '/'

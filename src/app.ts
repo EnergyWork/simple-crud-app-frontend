@@ -1,6 +1,5 @@
 import express, { Express } from 'express'
-import path from 'path'
-import IControllerBase from './interfaces/IControllerBase.interface'
+import IControllerBase from './interfaces/IControllerBase.interface.js'
 
 class App {
     public app: Express
@@ -35,7 +34,7 @@ class App {
     }
 
     private assets() {
-        this.app.use("/public", express.static(path.resolve(__dirname, "public")));
+        //this.app.use("/public", express.static(path.resolve(__dirname, "public"))); // TODO: fix it please
     }
 
     public listen() {

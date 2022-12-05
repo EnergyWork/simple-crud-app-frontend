@@ -1,7 +1,8 @@
 import bodyParser from 'body-parser';
-import App from './app';
-import HomeController from './controllers/home.controller';
-import loggerMiddleware from './middleware/logger';
+
+import App from './app.js';
+import HomeController from './controllers/home.controller.js';
+import loggerMiddleware from './middleware/logger.js';
 
 const app = new App({
     hostname: 'localhost',
