@@ -1,7 +1,7 @@
-import { Router } from "express"
+import { Router } from 'express'
 
 interface IControllerBase {
-    getRouter(): Router
+  getRouter(): Router
 }
 
 export default IControllerBase

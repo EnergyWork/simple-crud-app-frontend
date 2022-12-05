@@ -1,0 +1,13 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ingnore viwes, assets
+viwes
+./src/assets
+
+# VCS
+**/.git
+**/.svn
+**/.hg
+**/node_modules
