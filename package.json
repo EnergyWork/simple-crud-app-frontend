@@ -4,17 +4,13 @@
   "description": "frontend, typescript, bootstrap",
   "main": "index.js",
   "type": "module",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "scripts": {
     "dev": "npx nodemon",
     "build": "rimraf ./build && npx tsc",
     "start": "npm run build && node build/server",
     "lint": "npx eslint ./src",
-    "format": "npx eslint ./src --fix"
+    "format": "npx eslint ./src --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "github.com/EnergyWork",
