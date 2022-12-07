@@ -1,8 +1,9 @@
 import bodyParser from 'body-parser'
+import morgan from 'morgan'
 
 import App from './app.js'
-import HomeController from './controllers/home.controller.js'
-import loggerMiddleware from './middleware/logger.js'
+import AuthRouter from './routers/auth.router.js'
+import IndexRouter from './routers/index.router.js'
 
 const app = new App({
     hostname: 'localhost',
@@ -11,11 +12,12 @@ const app = new App({
     middlewares: [
         bodyParser.json(), 
         bodyParser.urlencoded({ extended: true }), 
-        loggerMiddleware,
+        morgan('tiny'), // mw logger for incoming requests
     ],
     // prettier-ignore
-    controllers: [
-        new HomeController()
+    routers: [
+        new IndexRouter(),
+        new AuthRouter(),
     ],
 })
 

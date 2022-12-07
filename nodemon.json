@@ -1,5 +1,5 @@
 {
-    "ignore": [".vscode", ".stuff", ".git", "node_modules/", "build/", "coverage/"],
+    "ignore": [".vscode", ".stuff", ".git", "node_modules/", "build/", "coverage/", "src/assets"],
     "watch": ["src"],
     "ext": ".js,.ts",
     "exec": "npx ts-node ./src/server.ts"

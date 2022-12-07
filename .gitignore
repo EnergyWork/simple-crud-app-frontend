@@ -1,7 +1,6 @@
 # Custom
 /.stuff
 /.vscode
-tsconfig.json.example
 /build
 
 # Logs

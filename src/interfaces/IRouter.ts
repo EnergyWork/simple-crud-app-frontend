@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
-interface IControllerBase {
+interface IRouterBase {
     getRouter(): Router
 }
 
-export default IControllerBase
+export default IRouterBase
