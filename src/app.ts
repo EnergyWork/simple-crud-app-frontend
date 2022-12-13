@@ -32,8 +32,8 @@ class App {
             extname: '.hbs',
         })
 
-        this.routes(appInit.routers)
         this.middlewares(appInit.middlewares)
+        this.routes(appInit.routers)
         this.templateEngine()
         this.assets()
 

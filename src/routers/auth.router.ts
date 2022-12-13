@@ -18,6 +18,7 @@ class AuthRouter implements IRouterBase {
         this.router.get(this.path.concat('/login'), this.controller.loginRender)
         this.router.post(this.path.concat('/login'), this.controller.login)
         this.router.get(this.path.concat('/register'), this.controller.registerRender)
+        this.router.post(this.path.concat('/register'), this.controller.register)
     }
 
     public getRouter(): Router {

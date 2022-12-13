@@ -2,6 +2,7 @@
 /.stuff
 /.vscode
 /build
+/log
 
 # Logs
 logs
