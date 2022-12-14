@@ -1,26 +1,25 @@
 import axios from 'axios'
-import CustomError from '../helper/error/error.js'
-import IError from '../interfaces/IError.js'
+import CError from '../helper/error/error.js'
 
-interface RplAuthRegister {
-    Error: IError
+interface ReplyAuthRegister {
+    Error: CError
 }
 
 class AuthService {
     // prettier-ignore
-    public async register(username: string, password: string, confirmPassword: string): Promise<RplAuthRegister> {
+    public async register(username: string, password: string, confirmPassword: string): Promise<ReplyAuthRegister> {
         console.log(username, password, confirmPassword)
         if (password != confirmPassword) {
-            return { Error: new CustomError(400, 'passwords is not equal') } //{Error: {Code: 400, Message: 'passwords is not equal'}}
+            return { Error: new CError(400, 'passwords is not equal') } //{Error: {Code: 400, Message: 'passwords is not equal'}}
         }
         return await this.registerRequest(username, password)
     }
 
     // prettier-ignore
-    private registerRequest = async (username: string, password: string): Promise<RplAuthRegister> => {
+    private registerRequest = async (username: string, password: string): Promise<ReplyAuthRegister> => {
         try {   
 
-            const res = await axios<RplAuthRegister>({
+            const res = await axios<ReplyAuthRegister>({
                 method: 'post',
                 baseURL: 'http://localhost:9000',
                 url: '/auth/registration',
@@ -31,12 +30,12 @@ class AuthService {
 
             console.debug('service.success: ', res.data);
 
-            return { Error: res.data.Error }
+            return res.data
 
         } catch (err) {
 
             console.debug('error:', err);
-            return { Error: new CustomError(500, 'internal system error') }
+            return { Error: new CError(500, 'internal system error') }
 
         }
     }

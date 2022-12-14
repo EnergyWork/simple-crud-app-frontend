@@ -1,8 +1,10 @@
 interface IError {
-    Code(): number
-    Message(): string
-    SetCode(a: number): void
-    SetMessage(a: string): void
+    Error: IErrorData
+}
+
+interface IErrorData {
+    Code: number
+    Message: string
 }
 
 export default IError

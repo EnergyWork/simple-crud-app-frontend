@@ -21,17 +21,18 @@ class AuthController {
         res.redirect('/auth/login')
     }
 
+    // prettier-ignore
     public register = async (req: Request, res: Response) => {
         console.debug(req.body)
-        const err = await this.authService.register(req.body.username, req.body.password1, req.body.password2)
-        console.debug('register.controller', err)
-        if (err.Error != null) {
-            if (err.Error.Code() != 200) {
-                res.render('auth/register', {
-                    message_exist: true,
-                    text: err.Error.Message(),
-                })
-            }
+        const rpl = await this.authService.register(req.body.username, req.body.password1, req.body.password2)
+        console.debug('register.controller', rpl)
+        console.debug('register.Error.Code', rpl.Error.Code)
+        console.debug('register.Error.Message', rpl.Error.Message)
+        if (rpl.Error.Code != 200) {
+            res.render('auth/register', {
+                message_exist: true,
+                text: rpl.Error.Message,
+            })
         } else {
             res.redirect('/auth/register')
         }
