@@ -1,4 +1,4 @@
-<div class="position-absolute top-50 start-50 translate-middle">
+<div class="position-absolute top-50 start-50 translate-middle p-1" style="max-width: 250px; width: 100%;"> 
 
         <form class="needs-validation" method="post" action="/auth/register" novalidate>
             <div class="mb-3 d-flex justify-content-center">
@@ -15,6 +15,9 @@
             <div class="mb-3">
                 <label class="form-label" for="passwordInput2">Repeat the password</label>
                 <input class="form-control" type="password" id="passwordInput2" name="password2" required>
+            </div>
+            <div class="d-flex justify-content-center mb-1">
+                {{> messages}}
             </div>
             <div class="d-flex justify-content-center mb-1">
                 <input class="btn btn-primary" type="submit" value="Continue">
